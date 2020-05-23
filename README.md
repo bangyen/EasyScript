@@ -38,6 +38,6 @@ Val '5' assigned to foo
 >>> $ let a Hello 
 >>> $ let b World !
 // And then i concatenate my Strings
->>> $ a + b
+>>> $ a s+ b
 Hello World !
 ```

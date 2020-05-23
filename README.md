@@ -38,6 +38,31 @@ Val '5' assigned to foo
 >>> $ let a Hello 
 >>> $ let b World !
 // And then i concatenate my Strings
->>> $ a s+ b
+>>> $ sc a b
 Hello World !
 ```
+
+### Mathematical Operations
+
+In SimplyPy, you can only use integers between -255 and 255 on all operations excepted in square root
+
+```javascript
+//Multiplication
+>>> $ 5 * 5
+25
+//Division
+>>> $ 5 / 5
+1
+//Subtraction
+>>> $ 5 - 5
+0
+//Addition
+>>> $ 5 + 5
+10
+//<number> power <number>
+>>> $ 4 ** 4
+256
+//Square root
+>>> $ sqrt 25
+5```
+

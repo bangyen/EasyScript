@@ -30,7 +30,11 @@ def saisie():
     
         
     elif(splited[0] != 'println!' and splited[0] != 'let'):
-        print('Error, "' + splited[0] + '" doesn\'t exists')
+        if(splited[0] in variables.keys() and splited[2] in variables.keys()):
+            if(splited[1] == '+'):
+                print(variables[splited[0]] + variables[splited[2]])
+        else:
+            print('Error, "' + splited[0] + '" doesn\'t exists')
 
 while True:
     saisie()

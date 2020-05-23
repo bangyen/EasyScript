@@ -61,7 +61,7 @@ In SimplyPy, you can only use integers between -255 and 255 on all operations ex
 10
 //<number> power <number>
 >>> $ 4 ** 4
-256
+1024
 //Square root
 >>> $ sqrt 25
 5```

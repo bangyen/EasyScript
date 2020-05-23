@@ -60,7 +60,7 @@ def saisie():
                 print(arg1 / arg2)
             if(splited[1] == '**'):
                 origin = arg1
-                for i in range(1, arg2 + 1):
+                for i in range(1, arg2):
                     arg1 *= origin
                 print(arg1)
         else:

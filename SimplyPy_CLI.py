@@ -27,9 +27,12 @@ def saisie():
     if(splited[0] == 'let'):
         variables[splited[1]] = splited[2]
         print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
+
+    if(splited[0] == 'help'):
+        print("To display a string : println! { <text>\nTo display a variable : println! # <var>\nTo initialize a variable : let <var>\nTo modify a variable value : let <var> <value>\nTo concatenate two String variables : <str_a> + <str_b>")
     
         
-    elif(splited[0] != 'println!' and splited[0] != 'let'):
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'help'):
         if(splited[0] in variables.keys() and splited[2] in variables.keys()):
             if(splited[1] == '+'):
                 print(variables[splited[0]] + variables[splited[2]])

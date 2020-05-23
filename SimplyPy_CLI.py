@@ -13,5 +13,8 @@ def saisie():
     if(splited[0] == 'println!'):
         if(splited[1].startswith('{')):
             instruct = splited[1]
-            toShow = instruct[:-1]
+            toShow = instruct[1:]
             print(toShow)
+    else:
+        print('Error,' + splited[0] + ' doesn\'t exists')
+saisie()

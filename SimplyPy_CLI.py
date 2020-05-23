@@ -2,9 +2,9 @@
 
 # This is the CLI version of SimplyPy
 # The instructions available are : 
-# println! { <string> and println! # <variable>
-# Mathematicals operations :  '+' '-' '/' '*' 'sqrt'
-# Variables declaration : let <name> <value>
+# println! { <string> and println! # <variable> DONE
+# Mathematicals operations :  '+' '-' '/' '*' 'sqrt' TODO
+# Variables declaration : let <name> <value> DONE
 
 variables = dict()
 

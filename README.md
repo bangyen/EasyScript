@@ -79,7 +79,7 @@ a == b
 ### System commands
 To execute system command, you'll use the keyword 'sys'
 ```javascript
->>> $ sys -> echo Hello World
+>>> $ sys() -> echo Hello World
 Hello World
 >>> $
 ```

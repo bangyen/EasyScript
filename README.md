@@ -4,7 +4,7 @@ EasyCript is a simple language transpiled in Python
 
 ## EasyScriptCLI
 
-It is the only SimpliPy version available at this day.
+It is the only EasyScript version available at this day.
 
 ### Console displaying
 

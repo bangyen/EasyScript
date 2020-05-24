@@ -66,10 +66,10 @@ In EasyScript, you can only use integers between -255 and 255 on all operations 
 
 ### Comparison
 
+KeyWord 'comp' is used to compare two variables
 ```javascript
 >>> $ let a Hello
 >>> $ let b Hello
-//Then i compare these 2 variables
+//then i compare these two variables
 >>> $ comp a b
-a == b
-```
+a == b```

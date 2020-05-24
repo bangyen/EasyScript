@@ -10,6 +10,10 @@ It is the only EasyScript version available at this day.
 
 I want to improve first the possibilities in console and after, maybe i'll make an interpreter for source code files.
 
+## How to run EasyScript CLI Interpreter
+
+Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher.
+
 ### Console displaying
 
 ```rust

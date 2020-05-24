@@ -83,3 +83,13 @@ To execute system command, you'll use the keyword 'sys'
 Hello World
 >>> $
 ```
+
+### Input
+To inpute some data, you'll use keyword 'scan()' in variable declaration
+```javascript
+>>> $ let a scan()
+//It creates a "terminal" to input my data
+> 5
+>>> $ println! # a
+5
+```

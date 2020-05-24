@@ -1,13 +1,10 @@
-# SimplyPy 
+# EasyScript 
 
-SimplyPy is a simple language transpiled in Python
+EasyCript is a simple language transpiled in Python
 
-## SimplyPy CLI
+## EasyScriptCLI
 
 It is the only SimpliPy version available at this day.
-
-It only has a few functions.
-
 
 ### Console displaying
 
@@ -44,7 +41,7 @@ Hello World !
 
 ### Mathematical Operations
 
-In SimplyPy, you can only use integers between -255 and 255 on all operations excepted in square root
+In EasyScript, you can only use integers between -255 and 255 on all operations excepted in square root
 
 ```javascript
 //Multiplication
@@ -66,3 +63,13 @@ In SimplyPy, you can only use integers between -255 and 255 on all operations ex
 >>> $ sqrt 25
 5```
 
+
+### Comparison
+
+```javascript
+>>> $ let a Hello
+>>> $ let b Hello
+//Then i compare these 2 variables
+>>> $ comp a b
+a == b
+```

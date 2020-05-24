@@ -119,3 +119,11 @@ The simplest function ever, i don't have to explain it
 >>> $ quit!
 /wafelack/desktop/easyscript/~ $
 ```
+
+### Wipe Function
+Used to erase all the variables
+```
+>>> $ wipe
+All variables erased !
+>>> $ 
+```

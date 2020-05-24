@@ -70,7 +70,7 @@ def saisie():
         print(variables[splited[1]] + variables[splited[2]])
 
     # Commandes système
-    if(splited[0] == 'sys'):
+    if(splited[0] == 'sys()'):
         if(splited[1] == '->'):
             os.system(splited[2])
         else:

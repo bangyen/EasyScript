@@ -112,3 +112,10 @@ Example :
 >>> $ println! # a
 45
 ```
+
+### Exit Function
+The simplest function ever, i don't have to explain it
+```javascript
+>>> $ quit!
+/wafelack/desktop/easyscript/~ $
+```

@@ -93,3 +93,18 @@ To inpute some data, you'll use keyword 'scan()' in variable declaration
 >>> $ println! # a
 5
 ```
+
+### Random Numbers
+To have a random number in a variable, you'll have to use keyword 'rand()'
+
+The syntax is : 
+```javascript
+>>> $ let <var> rand() <int> -> <int>
+```
+
+Example : 
+```javascript
+>>> $ let a rand() 1 -> 100
+>>> $ println! # a
+45
+```

@@ -75,9 +75,13 @@ def saisie():
             os.system(splited[2])
         else:
             print('Syntax Error : Try out "sys() -> <command>"')
+
+    # Exit function
+    if(splited[0] == 'quit!'):
+        exit()
         
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys'):      
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys()' and splited[0] != 'quit!'):      
         if(int(splited[0]) > -255 and int(splited[0]) < 255 and int(splited[2]) > -255 and int(splited[2]) < 255):
             arg1 = int(splited[0])
             arg2 = int(splited[2])

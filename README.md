@@ -73,4 +73,5 @@ KeyWord 'comp' is used to compare two variables
 >>> $ let b Hello
 //then i compare these two variables
 >>> $ comp a b
-a == b```
+a == b
+```

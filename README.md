@@ -75,3 +75,11 @@ KeyWord 'comp' is used to compare two variables
 >>> $ comp a b
 a == b
 ```
+
+### System commands
+To execute system command, you'll use the keyword 'sys'
+```javascript
+>>> $ sys -> echo Hello World
+Hello World
+>>> $
+```

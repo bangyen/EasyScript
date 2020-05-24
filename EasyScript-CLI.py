@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from math import sqrt as rc
 import os
+import random
 
 variables = dict()
 
@@ -23,12 +24,29 @@ def saisie():
     # Variables
     if(splited[0] == 'let'):
         
+        # Input
         if(splited[2] == 'scan()'):
             var = input("> ")
             variables[splited[1]] = var
+        
+        # Random
+        if(splited[2].startswith('rand()')):
+            splitIn = splited[2].split(' ')
+            if(splitIn[2] == '->'):
+                try:
+                    a = int(splitIn[1])
+                    b = int(splitIn[3])
+                    fin = random.randint(a, b)
+                    variables[splited[1]] = fin
+                except:
+                    print('Please specify two integers')
+            else:
+                print('Syntax Error : Did you mean "let <var> rand() <number> -> <number>" ?')
+
         elif(splited[2] != ''):
             variables[splited[1]] = splited[2]
             print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
+
         elif(splited[2] == ''):
             variables[splited[1]] = splited[2]
             print('Variable \'' + str(splited[1] + '\' initialized'))

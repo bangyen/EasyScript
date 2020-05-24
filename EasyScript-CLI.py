@@ -74,7 +74,7 @@ def saisie():
         if(splited[1] == '->'):
             os.system(splited[2])
         else:
-            print('Syntax Error : Try out "sys -> <command>"')
+            print('Syntax Error : Try out "sys() -> <command>"')
         
     # Opérations mathématiques
     elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys'):      

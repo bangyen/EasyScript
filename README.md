@@ -88,7 +88,7 @@ Hello World
 To inpute some data, you'll use keyword 'scan()' in variable declaration
 ```javascript
 >>> $ let a scan()
-//It creates a "terminal" to input my data
+//It creates a prompt to input my data
 > 5
 >>> $ println! # a
 5

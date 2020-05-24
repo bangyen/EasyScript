@@ -22,10 +22,15 @@ def saisie():
 
     # Variables
     if(splited[0] == 'let'):
-        variables[splited[1]] = splited[2]
-        if(splited[2] != ''):
+        
+        if(splited[2] == 'scan()'):
+            var = input("> ")
+            variables[splited[1]] = var
+        elif(splited[2] != ''):
+            variables[splited[1]] = splited[2]
             print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
         elif(splited[2] == ''):
+            variables[splited[1]] = splited[2]
             print('Variable \'' + str(splited[1] + '\' initialized'))
 
     # Comparaison de variables

@@ -23,7 +23,7 @@ My string
 
 ```
 
-### Variable declaration
+### Variables
 
 ```javascript
 //To initialize a variable

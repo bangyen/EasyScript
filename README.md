@@ -116,7 +116,7 @@ Example :
 ### Exit Function
 The simplest function ever, i don't have to explain it
 ```javascript
->>> $ quit!
+>>> $ quit
 /wafelack/desktop/easyscript/~ $
 ```
 

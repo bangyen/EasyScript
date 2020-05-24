@@ -2,7 +2,7 @@
 
 EasyCript is a simple language transpiled in Python. It is easy to use and to learn.
 
-I made this language **FOR FUN** so, don't say "Oh he is silly ! His language will never be used", you'll be king ;-) .
+I made this language **FOR FUN** so, don't say "Oh he is silly ! His language will never be used", you'll be kind ;-) .
 
 ## EasyScriptCLI
 

@@ -4,6 +4,10 @@ EasyCript is a simple language transpiled in Python. It is easy to use and to le
 
 I make this language **FOR FUN** so, don't say "Oh he is silly ! His language will never be used", you'll be kind ;-) .
 
+
+![g951](https://user-images.githubusercontent.com/61330081/82749273-4ff8e680-9da8-11ea-9076-78a1a22df3b4.png)
+Drawing by **_Akuro**, logo adaptation by **Wafelack**
+
 ## EasyScriptCLI
 
 It is the only EasyScript version available at this day.

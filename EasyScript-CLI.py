@@ -1,5 +1,6 @@
 #!/usr/bin/python
 from math import sqrt as rc
+import os
 
 variables = dict()
 
@@ -44,9 +45,16 @@ def saisie():
             print('You cannot calculate the square root of a string litteral !')
     if(splited[0] == 'sc'):
         print(variables[splited[1]] + variables[splited[2]])
+
+    # Commandes système
+    if(splited[0] == 'sys'):
+        if(splited[1] == '->'):
+            os.system(splited[2])
+        else:
+            print('Syntax Error : Try out "sys -> <command>"')
         
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc'):      
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys'):      
         if(int(splited[0]) > -255 and int(splited[0]) < 255 and int(splited[2]) > -255 and int(splited[2]) < 255):
             arg1 = int(splited[0])
             arg2 = int(splited[2])

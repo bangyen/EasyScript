@@ -12,7 +12,7 @@ I want to improve first the possibilities in console and after, maybe i'll make 
 
 ## How to run EasyScript CLI Interpreter
 
-Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher (better os 3.7.6).
+Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher (better is 3.7.6).
 
 ### Console displaying
 

@@ -61,7 +61,8 @@ In EasyScript, you can only use integers between -255 and 255 on all operations 
 256
 //Square root
 >>> $ sqrt 25
-5```
+5
+```
 
 
 ### Comparison

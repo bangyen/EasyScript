@@ -43,7 +43,7 @@ def saisie():
             else:
                 print('Syntax Error : Did you mean "let <var> rand() <number> -> <number>" ?')
 
-        elif(splited[2] != ''):
+        elif(splited[2] != '' and splited[2] != 'scan()'):
             variables[splited[1]] = splited[2]
             print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
 

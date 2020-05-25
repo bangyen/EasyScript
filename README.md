@@ -53,7 +53,7 @@ Hello World !
 
 ### Mathematical Operations
 
-In EasyScript, you can only use integers between -255 and 255 on all operations excepted in square root
+In EasyScript, you can only use integers between -32768 and 32768.
 
 ```javascript
 //Multiplication

@@ -88,7 +88,7 @@ def saisie():
         
     # Opérations mathématiques
     elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys()' and splited[0] != 'quit' and splited[0] != 'wipe'):      
-        if(int(splited[0]) > -255 and int(splited[0]) < 255 and int(splited[2]) > -255 and int(splited[2]) < 255):
+        if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
             arg1 = int(splited[0])
             arg2 = int(splited[2])
 

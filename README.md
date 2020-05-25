@@ -2,7 +2,7 @@
 
 EasyScript is a simple language transpiled in Python. It is easy to use and to learn.
 
-I make this language **FOR FUN** so, don't say "Oh he is silly ! His language will never be used", you'll be kind ;-) .
+I make this language **FOR FUN** so, don't say "Oh he is stupid ! He thinks he'll create the new Python", you'll be kind ;-) .
 
 
 ![g951](https://user-images.githubusercontent.com/61330081/82749273-4ff8e680-9da8-11ea-9076-78a1a22df3b4.png)
@@ -16,7 +16,7 @@ I want to improve first the possibilities in console and after, maybe i'll make 
 
 ## How to run EasyScript CLI Interpreter
 
-Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher (better is 3.7.6).
+Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher (better is 3.7.6) or download the windows executable in the last release.
 
 ### Console displaying
 

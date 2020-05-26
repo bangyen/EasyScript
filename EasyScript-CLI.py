@@ -4,6 +4,8 @@ import os
 import random
 
 variables = dict()
+arrays = dict()
+
 
 def saisie():
     saisie = input('>>> $ ')
@@ -20,10 +22,24 @@ def saisie():
                 print(variables[instruct])
             else:
                 print('No variable named "' + splited[2] + '"')
+        if(splited[1] == 'arr'):
+            instruct = splited[2]
+            if(instruct in arrays.keys()):
+                print(arrays[instruct])
 
-    #Comments
+    # Comments
     if(splited[0] == '#'):
         pass
+
+    # Arrays
+    if(splited[0] == 'array'):
+        if(splited[2] == 'scan()'):
+            print(
+                'Enter the characters you want to add to the array.\nuse the separation sign - ";"')
+            array = input('> ')
+            array = array.split(';')
+            
+            arrays[splited[1]] = array
 
     # Variables
     if(splited[0] == 'let'):
@@ -51,7 +67,7 @@ def saisie():
         elif(splited[2] != '' and splited[2] != 'scan()'):
             variables[splited[1]] = splited[2]
             print('Val \'' + str(splited[2]) +
-                '\' assigned to ' + str(splited[1]))
+                  '\' assigned to ' + str(splited[1]))
 
         elif(splited[2] == ''):
             variables[splited[1]] = splited[2]
@@ -92,7 +108,7 @@ def saisie():
         variables.clear()
 
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe' and splited[0] != '#'):
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe' and splited[0] != '#' and splited[0] != 'array'):
         if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
             arg1 = int(splited[0])
             arg2 = int(splited[2])
@@ -112,6 +128,7 @@ def saisie():
                 print(arg1)
         else:
             print('Error, "' + splited[0] + '" doesn\'t exists')
+
 
 try:
     while True:

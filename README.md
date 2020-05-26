@@ -1,4 +1,4 @@
-# EasyScript 
+# EasyScriptCLI 
 
 EasyScript is a simple language transpiled in Python. It is easy to use and to learn.
 
@@ -7,12 +7,6 @@ I make this language **FOR FUN** so, don't say "Oh he is stupid ! He thinks he'l
 
 ![g951](https://user-images.githubusercontent.com/61330081/82749273-4ff8e680-9da8-11ea-9076-78a1a22df3b4.png)
 Drawing by **_Akuro**, logo adaptation by **Wafelack**
-
-## EasyScriptCLI
-
-It is the only EasyScript version available at this day.
-
-I want to improve first the possibilities in console and after, maybe i'll make an interpreter for source code files.
 
 ## How to run EasyScript CLI Interpreter
 

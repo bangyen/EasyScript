@@ -16,7 +16,7 @@ def saisie():
             toShow = splited[2]
             print(toShow)
         if(splited[1] == '#'):
-            instruct =  splited[2]
+            instruct = splited[2]
             if(instruct in variables.keys()):
                 print(variables[instruct])
             else:
@@ -24,12 +24,12 @@ def saisie():
 
     # Variables
     if(splited[0] == 'let'):
-        
+
         # Input
         if(splited[2] == 'scan()'):
             var = input("> ")
             variables[splited[1]] = var
-        
+
         # Random
         if(splited[2].startswith('rand()')):
             splitIn = splited[2].split(' ')
@@ -42,11 +42,13 @@ def saisie():
                 except:
                     print('Please specify two integers')
             else:
-                print('Syntax Error : Did you mean "let <var> rand() <number> -> <number>" ?')
+                print(
+                    'Syntax Error : Did you mean "let <var> rand() <number> -> <number>" ?')
 
         elif(splited[2] != '' and splited[2] != 'scan()'):
             variables[splited[1]] = splited[2]
-            print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
+            print('Val \'' + str(splited[2]) +
+                  '\' assigned to ' + str(splited[1]))
 
         elif(splited[2] == ''):
             variables[splited[1]] = splited[2]
@@ -59,7 +61,7 @@ def saisie():
                 print(splited[1] + '==' + splited[2])
             if(variables[splited[1]] != variables[splited[2]]):
                 print(splited[1] + '!=' + splited[2])
-                
+
     # Calcul de racine carrée
     if(splited[0] == 'sqrt'):
         try:
@@ -81,14 +83,13 @@ def saisie():
     if(splited[0] == 'quit'):
         exit()
 
-        
     # Wipe function
     if(splited[0] == 'wipe'):
         print('All variables erased !')
         variables.clear()
-        
+
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe'):      
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe'):
         if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
             arg1 = int(splited[0])
             arg2 = int(splited[2])
@@ -108,6 +109,7 @@ def saisie():
                 print(arg1)
         else:
             print('Error, "' + splited[0] + '" doesn\'t exists')
+
 
 while True:
     saisie()

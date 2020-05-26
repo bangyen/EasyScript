@@ -5,6 +5,7 @@ import random
 
 variables = dict()
 
+
 def saisie():
     saisie = input('>>> $ ')
     splited = saisie.split(' ', 2)
@@ -70,11 +71,11 @@ def saisie():
         print(variables[splited[1]] + variables[splited[2]])
 
     # Commandes système
-    if(splited[0] == 'sys()'):
+    if(splited[0] == 'sys'):
         if(splited[1] == '->'):
             os.system(splited[2])
         else:
-            print('Syntax Error : Try out "sys() -> <command>"')
+            print('Syntax Error : Try out "sys -> <command>"')
 
     # Exit function
     if(splited[0] == 'quit'):
@@ -87,7 +88,7 @@ def saisie():
         variables.clear()
         
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'sc' and splited[0] != 'sys()' and splited[0] != 'quit' and splited[0] != 'wipe'):      
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe'):      
         if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
             arg1 = int(splited[0])
             arg2 = int(splited[2])

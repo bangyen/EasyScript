@@ -23,6 +23,8 @@ My string
 
 >>> $ println! # <variable>
 
+//To display an array list
+>>> $ println! arr <array>
 ```
 
 ### Variables
@@ -36,6 +38,22 @@ Variable 'foo' initialized
 >>> $ let foo 5
 Val '5' assigned to foo
 ```
+
+### Comments
+To leave a comment, just write a sharp and then your comment
+```python
+# My comment here 
+```
+
+### Arrays
+
+Arrays aren't editable at this moment, but they'll be soon.
+
+```rust
+//to declare an array
+array <name> content A;content B;content C;etc
+```
+
 ### String concatenation
 ```javascript
 >>> $ let a Hello 

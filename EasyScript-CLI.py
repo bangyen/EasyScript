@@ -38,7 +38,7 @@ def saisie():
             new_value = new_value.split(';')
             arrays[arr_name] = new_value
 
-        # Change let
+        # Change var
         if(splited[1] == 'let'):
             var_name = splited[2]
             print(variables[var_name])

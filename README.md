@@ -8,9 +8,10 @@ I make this language **FOR FUN** so, don't say "Oh he is stupid ! He thinks he'l
 ![g951](https://user-images.githubusercontent.com/61330081/82749273-4ff8e680-9da8-11ea-9076-78a1a22df3b4.png)
 Drawing by **_Akuro**, logo adaptation by **Wafelack**
 
-Click [here](https://github.com/Wafelack/EasyScript/README.md#EasyScript-Interpreter) to go to file interpreter documentation.
+Click [here](https://github.com/Wafelack/EasyScript/blob/master/README.md#EasyScript-Interpreter) to go to file interpreter documentation.
 
 # EasyScript-CLI
+
 
 ## How to run EasyScript CLI 
 

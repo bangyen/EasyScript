@@ -155,3 +155,20 @@ Used to erase all the variables
 All variables erased !
 >>> $ 
 ```
+# EasyScript Interpreter
+
+This is the interpreter of EasyScript language
+
+To read a file, just specify the path of the file in the prompt
+
+### Run EasyScript Interpreter
+To run it, you have to launch the main.py file it with Python 3.x.x (better is 3.7.6) or to run the executable in the last release
+
+### How to source code file interpreting
+
+Create a file with .esi extension and write your source code in it.
+
+Then write the file's path in the prompt.
+
+
+Don't forget to leave a star and to follow me if you liked it !

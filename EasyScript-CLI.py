@@ -27,6 +27,25 @@ def saisie():
             if(instruct in arrays.keys()):
                 print(arrays[instruct])
 
+    # Change array or var
+    if(splited[0] == 'chng'):
+
+        # Change array
+        if(splited[1] == 'arr'):
+            arr_name = splited[2]
+            print(arrays[arr_name])
+            new_value = input('enter new array value\n> ')
+            new_value = new_value.split(';')
+            arrays[arr_name] = new_value
+
+        # Change var
+        if(splited[1] == 'let'):
+            var_name = splited[2]
+            print(variables[var_name])
+
+            new_value = input('enter new variable value\n> ')
+            variables[var_name] = new_value
+
     # Comments
     if(splited[0] == '#'):
         pass
@@ -108,7 +127,7 @@ def saisie():
         variables.clear()
 
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe' and splited[0] != '#' and splited[0] != 'array'):
+    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe' and splited[0] != '#' and splited[0] != 'array' and splited[0] != 'chng'):
         if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
             arg1 = int(splited[0])
             arg2 = int(splited[2])

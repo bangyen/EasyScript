@@ -164,7 +164,7 @@ All variables erased !
 
 This is the interpreter of EasyScript language
 
-To read a file, just specify the path of the file in the prompt
+It works on a function that is pretty similar to CLI's.
 
 ### Run EasyScript Interpreter
 To run it, you have to launch the main.py file it with Python 3.x.x (better is 3.7.6) or to run the executable in the last release

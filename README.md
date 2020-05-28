@@ -132,6 +132,14 @@ Example :
 >>> $ println! # a
 45
 ```
+### Change array value
+```javascript
+>>> $ chnge arr <array name>
+//program will print variable value here
+enter new array value
+> //type new value here using separator ";"
+```
+You can do the same thing here,  just write ```chng let //var name here```
 
 ### Exit Function
 The simplest function ever, i don't have to explain it

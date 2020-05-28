@@ -52,7 +52,7 @@ To leave a comment, just write a sharp and then your comment
 
 ### Arrays
 
-To see how to edit an array [click here](https://github.com/Wafelack/EasyScript/blob/master/README.md###Change%20array%20value)
+To see how to edit an array [click here](https://github.com/Wafelack/EasyScript/blob/master/README.md#Change%20array%20value)
 
 ```rust
 //to declare an array

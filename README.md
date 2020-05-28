@@ -1,4 +1,4 @@
-# EasyScriptCLI 
+# EasyScript
 
 EasyScript is a simple language transpiled in Python. It is easy to use and to learn.
 
@@ -8,7 +8,11 @@ I make this language **FOR FUN** so, don't say "Oh he is stupid ! He thinks he'l
 ![g951](https://user-images.githubusercontent.com/61330081/82749273-4ff8e680-9da8-11ea-9076-78a1a22df3b4.png)
 Drawing by **_Akuro**, logo adaptation by **Wafelack**
 
-## How to run EasyScript CLI Interpreter
+Click [here](https://github.com/Wafelack/EasyScript/README.md#EasyScript-Interpreter) to go to file interpreter documentation.
+
+# EasyScript-CLI
+
+## How to run EasyScript CLI 
 
 Go to releases, download the latest stable release (or the latest pre release, if you live dangerously) and run it with Python 3.7.4 or higher (better is 3.7.6) or download the windows executable in the last release.
 
@@ -155,7 +159,7 @@ Used to erase all the variables
 All variables erased !
 >>> $ 
 ```
-# EasyScript Interpreter
+# EasyScript-Interpreter
 
 This is the interpreter of EasyScript language
 

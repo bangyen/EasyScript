@@ -21,12 +21,12 @@ Go to releases, download the latest stable release (or the latest pre release, i
 
 ```rust
 //To display a string directly
->>> $ println! { My string
+>>> $ println! str My string
 My string
 
 //To display a variable
 
->>> $ println! # <variable>
+>>> $ println! var <variable>
 
 //To display an array list
 >>> $ println! arr <array>

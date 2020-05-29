@@ -11,10 +11,10 @@ def transpile(line):
 
     # Affichage
     if(splited[0] == 'println!'):
-        if(splited[1] == '{'):
+        if(splited[1] == 'str'):
             toShow = splited[2]
             print(toShow)
-        if(splited[1] == '#'):
+        if(splited[1] == 'var'):
             instruct =  splited[2]
             if(instruct in variables.keys()):
                 print(variables[instruct])

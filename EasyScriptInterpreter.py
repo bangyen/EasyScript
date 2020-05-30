@@ -1,6 +1,6 @@
-from lexerbyline import transpile
-
 #!/usr/bin/python
+
+from lexerbyline import transpile
 from math import sqrt as rc
 import os
 import random

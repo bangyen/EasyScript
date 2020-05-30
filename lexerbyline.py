@@ -9,6 +9,8 @@ variables = dict()
 def transpile(line):
     splited = line.split(' ', 2)
 
+    
+
     # Affichage
     if(splited[0] == 'println!'):
         if(splited[1] == 'str'):

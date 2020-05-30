@@ -2,14 +2,31 @@
 from math import sqrt as rc
 import os
 import random
+import conditions
 
 variables = dict()
 arrays = dict()
 
 
-def saisie():
+def code():
     saisie = input('>>> $ ')
     splited = saisie.split(' ', 2)
+
+       # Conditions
+    if(saisie.startswith('if')):
+        splited = saisie.split(' ', 4)
+        if(splited[1] in variables.keys() and splited[3] in variables.keys()):
+            if(splited[2] == '==' and splited[4] == '{'):
+                if(variables[splited[1]] == variables[splited[2]]):
+                    conditions.con()
+                else:
+                    pass
+            else:
+                print('Syntax Error')
+
+        else:
+            print('No variable found !')
+
 
     # Affichage
     if(splited[0] == 'println!'):
@@ -151,6 +168,6 @@ def saisie():
 
 try:
     while True:
-        saisie()
+        code()
 except Exception as ex:
     print(ex)

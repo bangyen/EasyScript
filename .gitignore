@@ -1,3 +1,5 @@
 .dist/
 EasyScript-CLI.exe
 __pycache__/
+*.exe
+EasyScript-CLI.py

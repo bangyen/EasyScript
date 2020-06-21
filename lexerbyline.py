@@ -2,29 +2,42 @@
 from math import sqrt as rc
 import os
 import random
+from parser import parse
 
-variables = dict()
+variables = {}
 
+keywords = {
+    "println!": print_builtin
+}
 
-def transpile(line):
-    splited = line.split(' ', 2)
+def print_builtin(line):
+    splited = line.split(' ')
+    toPrint = []
+    printF = str()
 
-    
-
-    # Affichage
-    if(splited[0] == 'println!'):
-        if(splited[1] == 'str'):
-            toShow = splited[2]
-            print(toShow)
-        if(splited[1] == 'var'):
-            instruct =  splited[2]
-            if(instruct in variables.keys()):
-                print(variables[instruct])
+    for i in range(1, len(splited) - 1 ):
+        if(i.startswith('$')):
+            if(i in variables.keys()):
+                toPrint.append(str(variables[i]))
             else:
-                print('No variable named "' + splited[2] + '"')
+                print("No variable named " + i[1:])
+        else:
+            toPrint.append(str(i))
+            
+    for e in toPrint:
+        printF += e
+
+    print(printF)
+
+
+
+
+def transpile(line):   
 
     # Variables
-    if(splited[0] == 'let'):
+    if(line.startswith('let')):
+
+        splited = parse(3, ' ', line)
         
         # Input
         if(splited[2] == 'scan()'):
@@ -53,8 +66,11 @@ def transpile(line):
             variables[splited[1]] = splited[2]
             print('Variable \'' + str(splited[1] + '\' initialized'))
 
+
+
     # Comparaison de variables
-    if(splited[0] == 'comp'):
+    if(line.startswith('comp')):
+        splited = parse(1, ' ', line)
         if((splited[1]) in variables.keys() and splited[2] in variables.keys()):
             if(variables[splited[1]] == variables[splited[2]]):
                 print(splited[1] + '==' + splited[2])
@@ -62,13 +78,14 @@ def transpile(line):
                 print(splited[1] + '!=' + splited[2])
                 
     # Calcul de racine carrée
-    if(splited[0] == 'sqrt'):
+    if(line.startswith('sqrt')):
+        splited = parse(1, ' ', line)
         try:
             nombre = int(splited[1])
             print(rc(nombre))
         except:
             print('You cannot calculate the square root of a string litteral !')
-    if(splited[0] == 'sc'):
+    if(line.startswith('sc')):
         print(variables[splited[1]] + variables[splited[2]])
 
     # Commandes système

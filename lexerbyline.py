@@ -7,7 +7,10 @@ variables = {}
 
 keywords = {
     "println!": print_builtin,
-    "let": let_builtin
+    "let": let_builtin,
+    "quit": exit,
+    "wipe": variables.clear
+
 }
 
 def print_builtin(line):
@@ -51,36 +54,12 @@ def let_builtin (line):
 
 
 
+
 def transpile(line):   
 
-
-        elif(splited[2] != '' and splited[2] != 'scan()'):
-            variables[splited[1]] = splited[2]
-            print('Val \'' + str(splited[2]) + '\' assigned to ' + str(splited[1]))
-
-        elif(splited[2] == ''):
-            variables[splited[1]] = splited[2]
-            print('Variable \'' + str(splited[1] + '\' initialized'))
-
-
-
     # Comparaison de variables
-    if(line.startswith('comp')):
-        splited = parse(1, ' ', line)
-        if((splited[1]) in variables.keys() and splited[2] in variables.keys()):
-            if(variables[splited[1]] == variables[splited[2]]):
-                print(splited[1] + '==' + splited[2])
-            if(variables[splited[1]] != variables[splited[2]]):
-                print(splited[1] + '!=' + splited[2])
+    splited = line.split(' ')
                 
-    # Calcul de racine carrée
-    if(line.startswith('sqrt')):
-        splited = parse(1, ' ', line)
-        try:
-            nombre = int(splited[1])
-            print(rc(nombre))
-        except:
-            print('You cannot calculate the square root of a string litteral !')
     if(line.startswith('sc')):
         print(variables[splited[1]] + variables[splited[2]])
 

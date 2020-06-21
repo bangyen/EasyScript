@@ -7,7 +7,8 @@ from parser import parse
 variables = {}
 
 keywords = {
-    "println!": print_builtin
+    "println!": print_builtin,
+    "let": let_builtin
 }
 
 def print_builtin(line):
@@ -28,6 +29,20 @@ def print_builtin(line):
         printF += e
 
     print(printF)
+
+def let_builtin (line):
+    splited = line.split(' ', 4)
+    
+    if not(splited[2] == '=' and splited[0] == 'let'):
+        print("Please use '=' to assign a value and use 'let' to declare or modify a variable")
+        return
+    try:
+        variables[splited[1]] = int(splited[3])
+    except:
+        variables[splited[1]] = str(splited[3])
+    finally:
+        print(f'Value {str(splited[3])} assigned to {splited[1]}')
+
 
 
 

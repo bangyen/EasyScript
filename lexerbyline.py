@@ -35,6 +35,11 @@ def let_builtin (line):
     if not(splited[2] == '=' and splited[0] == 'let'):
         print("Please use '=' to assign a value and use 'let' to declare or modify a variable")
         return
+
+    if(splited[3] == 'scan()'):
+            var = input("> ")
+            variables[splited[1]] = var
+        
     try:
         variables[splited[1]] = int(splited[3])
     except:
@@ -48,29 +53,6 @@ def let_builtin (line):
 
 def transpile(line):   
 
-    # Variables
-    if(line.startswith('let')):
-
-        splited = parse(3, ' ', line)
-        
-        # Input
-        if(splited[2] == 'scan()'):
-            var = input("> ")
-            variables[splited[1]] = var
-        
-        # Random
-        if(splited[2].startswith('rand()')):
-            splitIn = splited[2].split(' ')
-            if(splitIn[2] == '->'):
-                try:
-                    a = int(splitIn[1])
-                    b = int(splitIn[3])
-                    fin = random.randint(a, b)
-                    variables[splited[1]] = fin
-                except:
-                    print('Please specify two integers')
-            else:
-                print('Syntax Error : Did you mean "let <var> rand() <number> -> <number>" ?')
 
         elif(splited[2] != '' and splited[2] != 'scan()'):
             variables[splited[1]] = splited[2]

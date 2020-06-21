@@ -20,28 +20,17 @@ Go to releases, download the latest stable release (or the latest pre release, i
 ### Console displaying
 
 ```rust
-//To display a string directly
->>> $ println! str My string
-My string
-
-//To display a variable
-
->>> $ println! var <variable>
-
-//To display an array list
->>> $ println! arr <array>
+>>> $ let username = Wafelack
+>>> $ println! Hello $username
+Hello Wafelack
 ```
 
 ### Variables
 
 ```javascript
 //To initialize a variable
->>> $ let foo //do not forget the space after the variable name or you'd catch an error
-Variable 'foo' initialized
-
-//To edit a variable's value
->>> $ let foo 5
-Val '5' assigned to foo
+>>> $ let foo = 5
+Value 5 assigned to foo
 ```
 
 ### Comments

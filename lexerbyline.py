@@ -2,7 +2,6 @@
 from math import sqrt as rc
 import os
 import random
-from parser import parse
 
 variables = {}
 

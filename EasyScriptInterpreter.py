@@ -13,9 +13,9 @@ def execute():
     f = fichier.read()
     sliced = f.split('\n')
 
-    length = len(sliced) - 1
+    length = len(sliced)
 
-    for i in range(0, length):
+    for i in range(length):
         transpile(sliced[i])
 
 while True:

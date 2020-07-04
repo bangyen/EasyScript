@@ -18,9 +18,9 @@ def print_builtin(line):
     toPrint = []
     printF = str()
 
-    for i in range(1, len(splited) - 1 ):
-        if(i.startswith('$')):
-            if(i in variables.keys()):
+    for i in range(1, len(splited) - 1):
+        if i.startswith('$'):
+            if i in variables.keys():
                 toPrint.append(str(variables[i]))
             else:
                 print("No variable named " + i[1:])
@@ -35,11 +35,11 @@ def print_builtin(line):
 def let_builtin (line):
     splited = line.split(' ', 4)
     
-    if not(splited[2] == '=' and splited[0] == 'let'):
+    if not (splited[2] == '=' and splited[0] == 'let'):
         print("Please use '=' to assign a value and use 'let' to declare or modify a variable")
         return
 
-    if(splited[3] == 'scan()'):
+    if splited[3] == 'scan()':
             var = input("> ")
             variables[splited[1]] = var
         
@@ -60,44 +60,40 @@ def transpile(line):
     # Comparaison de variables
     splited = line.split(' ')
                 
-    if(line.startswith('sc')):
+    if line.startswith('sc'):
         print(variables[splited[1]] + variables[splited[2]])
 
     # Commandes système
-    if(splited[0] == 'sys'):
+    if splited[0] == 'sys':
         if(splited[1] == '->'):
             os.system(splited[2])
         else:
             print('Syntax Error : Try out "sys -> <command>"')
 
     # Exit function
-    if(splited[0] == 'quit'):
+    if splited[0] == 'quit':
         exit()
 
         
     # Wipe function
-    if(splited[0] == 'wipe'):
+    if splited[0] == 'wipe':
         print('All variables erased !')
         variables.clear()
         
     # Opérations mathématiques
-    elif(splited[0] != 'println!' and splited[0] != 'let' and splited[0] != 'comp' and splited[0] != 'sqrt' and splited[0] != 'file' and splited[0] != 'sc' and splited[0] != 'sys' and splited[0] != 'quit' and splited[0] != 'wipe'):      
-        if(int(splited[0]) > -32768 and int(splited[0]) < 32768 and int(splited[2]) > -32768 and int(splited[2]) < 32768):
+    elif splited[0] not in ['println!', 'let', 'comp', 'sqrt', 'file', 'sc', 'sys', 'quit', 'wipe']:      
+        if abs(int(splited[0])) < 32768 and abs(int(splited[2])) < 32768:
             arg1 = int(splited[0])
             arg2 = int(splited[2])
-
-            if(splited[1] == '+'):
-                print(arg1 + arg2)
-            if(splited[1] == '-'):
-                print(arg1 - arg2)
-            if(splited[1] == '*'):
-                print(arg1 * arg2)
-            if(splited[1] == '/'):
-                print(arg1 / arg2)
-            if(splited[1] == '**'):
-                origin = arg1
-                for i in range(1, arg2):
-                    arg1 *= origin
-                print(arg1)
+            op_dict = {
+                '+': lambda: arg1 + arg2,
+                '-': lambda: arg1 - arg2,
+                '*': lambda: arg1 * arg2,
+                '/': lambda: arg1 / arg2,
+                '**': lambda: arg1 ** arg2
+            }
+            
+            if splited[1] in op_dict:
+                print(op_dict[splited[1]]())
         else:
-            print('Error, "' + splited[0] + '" doesn\'t exists')
+            print(f'Error, "{splited[0]}" doesn\'t exists')
